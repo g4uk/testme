@@ -21,5 +21,7 @@ module Testme
       g.test_framework  :rspec
       g.integration_tool :rspec
     end
+
+    config.active_record.schema_format = :sql
   end
 end
