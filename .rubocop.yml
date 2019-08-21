@@ -1,0 +1,48 @@
+---
+require: rubocop-performance
+AllCops:
+  TargetRubyVersion: 2.6.3
+  Exclude:
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'bin/*'
+    - 'db/**/*'
+    - 'config/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/**/*'
+    - 'db/migrate/**/*'
+    - 'lib/tasks/*.rake'
+  ExcludedMethods: ['describe', 'context', 'namespace', 'resource']
+Documentation:
+  Enabled: false
+Layout/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: ignore_implicit
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+Lint/AssignmentInCondition:
+  Enabled: false
+Metrics/LineLength:
+  Max: 80
+Metrics/MethodLength:
+  Max: 10
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*.rb'
+Metrics/ClassLength:
+  Max: 100
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/*.rb'
+Naming/UncommunicativeMethodParamName:
+  MinNameLength: 2
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+Style/RescueStandardError:
+  Enabled: false
+Style/RedundantReturn:
+  # When `true` allows code like `return x, y`.
+  AllowMultipleReturnValues: true
