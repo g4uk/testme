@@ -10,6 +10,11 @@ if Rails.env.production?
 end
 
 require 'rspec/rails'
+require 'simplecov'
+
+SimpleCov.start('rails') do
+  minimum_coverage 90
+end
 
 begin
   ActiveRecord::Migration.maintain_test_schema!
