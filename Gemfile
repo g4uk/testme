@@ -17,18 +17,18 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS),
 # making cross-origin AJAX possible
-gem 'rack-cors', '1.0.3'
+gem 'rack-cors', '~> 1.0.3'
 
-gem 'graphql', '1.9.10'
+gem 'graphql', '~> 1.9.10'
 
 group :development, :test do
-  gem 'byebug', '11.0.1'
-  gem 'rspec-rails', '3.8.2'
+  gem 'byebug', '~> 11.0.1'
+  gem 'rspec-rails', '~> 3.8.2'
 
   # Linters
   gem 'rubocop', '~> 0.73'
   gem 'rubocop-performance', '~> 1.3'
-  gem 'rubocop-rspec', '1.33.0'
+  gem 'rubocop-rspec', '~> 1.33.0'
 end
 
 group :development do
@@ -37,4 +37,6 @@ group :development do
   # running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'graphiql-rails', '~> 1.7'
 end

@@ -6,6 +6,7 @@ require "active_model/railtie"
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_text/engine"
+require "sprockets/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -22,6 +23,7 @@ module Testme
       g.integration_tool :rspec
     end
 
+    config.paths.add 'lib', eager_load: false, autoload: true
     config.active_record.schema_format = :sql
   end
 end

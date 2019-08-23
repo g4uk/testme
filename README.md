@@ -25,3 +25,70 @@ Requirements:
 - includes documentation to GraphQL for new types (query, mutation, 
 enum, input object)
 - test API calls and unit tests
+
+----
+
+### How to run (development mode)
+
+- ```bundle install```
+- ```rake db:setup & rake db:migrate & rake db:seed```
+- ```rails s```
+
+Postgresql must be installed.
+- API testing tools: ```http://127.0.0.1:3000/graphiql```
+- API endpoint: ```/graphql```
+
+Examples of requests:
+
+- Create a new Contract
+```
+mutation {
+ createContract(contract: {status: draft, name: "test4", startDate: "2023-03-03"}) {
+   contract {
+     id
+     status,
+     startDate
+   },
+   errors
+ }
+}
+```
+- Update Contract
+```
+mutation {
+  updateContract(id: 3, contract: {status: signed, name: "test1", startDate: "2023-03-03", avgMonthlyPrice: 12.8}) {
+    contract {
+      status
+      startDate,
+      avgMonthlyPrice
+    }
+    errors
+  }
+}
+```
+- Delete Contract
+```
+mutation {
+  deleteContract(id: 3) {
+    errors
+  }
+}
+```
+- Get Contract by ID
+```
+query {
+  contract(id: 6) {
+    status,
+    name
+  }
+}
+```
+- Get all contracts
+```
+query {
+  contracts {
+    status,
+    name
+  }
+}
+```
