@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations::Contract
   class Delete < GraphQL::Schema::Mutation
     graphql_name 'DeleteContract'

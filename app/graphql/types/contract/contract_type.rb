@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types::Contract
   class ContractType < Types::BaseObject
     graphql_name 'Contract'
@@ -6,7 +8,7 @@ price'
 
     field :id, ID, null: false,
           description: 'Contract ID'
-    field :status, ContractStatusEnum,null: false,
+    field :status, ContractStatusEnum, null: false,
           description: 'Contract status'
     field :name, String, null: false,
           description: 'Name of the contract'

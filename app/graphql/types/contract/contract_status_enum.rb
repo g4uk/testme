@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types::Contract
   class ContractStatusEnum < Types::BaseEnum
     graphql_name 'ContractStatus'

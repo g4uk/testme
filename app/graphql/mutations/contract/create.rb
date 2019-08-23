@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Mutations::Contract
   class Create < GraphQL::Schema::Mutation
     graphql_name 'CreateContract'

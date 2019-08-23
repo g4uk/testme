@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class Iso8601DateType < Types::BaseScalar
     description 'An ISO 8601-encoded date'

@@ -2,7 +2,6 @@
 
 module ContractServices
   class Update < Base
-
     # @return [Hash]
     def call
       unless params[:form].valid?

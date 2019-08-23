@@ -23,6 +23,11 @@ gem 'graphql', '~> 1.9.10'
 
 group :development, :test do
   gem 'byebug', '~> 11.0.1'
+
+  gem 'database_cleaner', '~> 1.7'
+  gem 'factory_bot_rails', '~> 5.0.2'
+  gem 'faker', '~> 2.1.2'
+
   gem 'rspec-rails', '~> 3.8.2'
 
   # Linters
