@@ -2,6 +2,9 @@
 
 module Types::Contract
   class ContractInput < Types::BaseInputObject
+    graphql_name 'ContractInput'
+    description 'Input Object for Contract'
+
     argument :status, ContractStatusEnum, required: true,
              description: 'Contract status'
     argument :name, String, required: true,

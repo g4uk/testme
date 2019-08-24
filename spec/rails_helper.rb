@@ -12,6 +12,8 @@ end
 require 'rspec/rails'
 require 'simplecov'
 
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }
+
 SimpleCov.start('rails') do
   minimum_coverage 90
 end
@@ -26,4 +28,6 @@ end
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+
+  config.include FactoryBot::Syntax::Methods
 end

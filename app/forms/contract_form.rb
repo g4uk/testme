@@ -22,6 +22,8 @@ class ContractForm < BaseForm
   end
 
   def verify_future_start_date
+    return unless start_date
+
     errors.add :start_date, 'in the past' if start_date.past?
   end
 end

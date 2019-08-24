@@ -44,7 +44,7 @@ CREATE TABLE public.contracts (
     status public.contract_status NOT NULL,
     name character varying(255) NOT NULL,
     start_date date NOT NULL,
-    avg_monthly_price numeric(8,2) DEFAULT 0.0 NOT NULL,
+    avg_monthly_price numeric(8,2) DEFAULT 0.0,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL
 );
