@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ContractServices
-  class Index < Base
+  class Index < BaseService
     # @return [ActiveRecord::Relation]
     def call
       offset = params[:offset] || 1

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ContractServices
-  class Update < Base
+  class Update < BaseService
     # @return [Hash]
     def call
       unless params[:form].valid?
